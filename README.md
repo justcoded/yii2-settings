@@ -18,13 +18,13 @@ The preferred way to install this extension is through composer.
 Either run
 
 ```bash
-php composer.phar require --prefer-dist yii2mod/yii2-settings "*"
+php composer.phar require --prefer-dist justcoded/yii2-settings "*"
 ```
 
 or add
 
 ```
-"yii2mod/yii2-settings": "*"
+"justcoded/yii2-settings": "*"
 ```
 
 to the require section of your composer.json.

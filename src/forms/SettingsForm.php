@@ -53,6 +53,10 @@ abstract class SettingsForm extends Model
 	 */
 	public function save()
 	{
+		if (! $this->validate()) {
+			return false;
+		}
+
 		$save = true;
 		foreach ($this->getAttributes() as $key => $value) {
 			$save &= Instance::of(SettingsInterface::class)->get()->set($this->sectionName(), $key, $value);

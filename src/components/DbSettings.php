@@ -104,4 +104,14 @@ class DbSettings extends Settings
 		}
 		return $this->insertValue($section, $key, $value);
 	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param mixed $defaultValue Default value if $key not exists
+	 */
+	public function get($section, $key, $defaultValue = null)
+	{
+		return parent::get($section, $key) ?? $defaultValue;
+	}
 }
